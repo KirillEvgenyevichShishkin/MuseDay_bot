@@ -307,19 +307,20 @@ def main():
 
     tz = pytz.timezone(TIMEZONE)
 
+    reminder_time = time(21, 10, tzinfo=tz)
+    summary_time  = time(9, 0, tzinfo=tz)
+
     # Напоминание в 21:10
     app.job_queue.run_daily(
         send_reminders,
-        time=REMINDER_TIME,
-        timezone=tz,
+        time=reminder_time,
         name="daily_reminder",
     )
 
     # Сводка в 09:00
     app.job_queue.run_daily(
         send_summary,
-        time=SUMMARY_TIME,
-        timezone=tz,
+        time=summary_time,
         name="daily_summary",
     )
 
