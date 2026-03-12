@@ -19,7 +19,7 @@ from telegram.ext import (
 # ──────────────────────────────────────────────
 BOT_TOKEN = "ВАШ_ТОКЕН_ЗДЕСЬ"          # токен от @BotFather
 MANAGER_CHAT_ID = 123456789             # твой chat_id (узнать: написать боту /start, потом /myid)
-TIMEZONE = "Europe/Moscow"             # твой часовой пояс
+TIMEZONE = "Asia/Yekaterinburg"        # твой часовой пояс
 
 REMINDER_TIME = time(21, 10)           # напоминание в 21:10
 SUMMARY_TIME  = time(9, 0)            # сводка в 09:00 следующего дня
