@@ -1,6 +1,7 @@
 import logging
 import sqlite3
 import asyncio
+import os
 from datetime import datetime, time
 import pytz
 
@@ -17,8 +18,8 @@ from telegram.ext import (
 # ──────────────────────────────────────────────
 # НАСТРОЙКИ — замени на свои
 # ──────────────────────────────────────────────
-BOT_TOKEN = "ВАШ_ТОКЕН_ЗДЕСЬ"          # токен от @BotFather
-MANAGER_CHAT_ID = 123456789             # твой chat_id (узнать: написать боту /start, потом /myid)
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+MANAGER_CHAT_ID = int(os.environ["MANAGER_CHAT_ID"])
 TIMEZONE = "Asia/Yekaterinburg"        # твой часовой пояс
 
 REMINDER_TIME = time(21, 10)           # напоминание в 21:10
